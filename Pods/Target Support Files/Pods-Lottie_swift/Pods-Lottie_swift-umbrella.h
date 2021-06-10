@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_Lottie_demoVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_Lottie_demoVersionString[];
+FOUNDATION_EXPORT double Pods_Lottie_swiftVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_Lottie_swiftVersionString[];
 

@@ -1,6 +1,6 @@
 //
 //  AnimationExplorerViewController.swift
-//  Lottie_demo
+//  Lottie_swift
 //
 //  Created by jixiangfeng on 2021/6/10.
 //
@@ -28,9 +28,6 @@ class AnimationExplorerViewController: UIViewController {
         self.animationPlayerView.layer.borderWidth = 1
         self.animationPlayerView.layer.borderColor = UIColor.red.cgColor
         self.view.addSubview(self.animationPlayerView)
-        
-        self.stackView.axis = .horizontal
-        self.view.addSubview(self.stackView)
     }
     
     func setupLayouts() -> Void {
@@ -39,11 +36,8 @@ class AnimationExplorerViewController: UIViewController {
         self.animationPlayerView.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
         self.animationPlayerView.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
         self.animationPlayerView.bottomAnchor.constraint(lessThanOrEqualTo: self.stackView.topAnchor).isActive = true
-        
-        self.stackView.translatesAutoresizingMaskIntoConstraints = false
-        self.stackView.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
-        self.stackView.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
-        self.stackView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
-        self.stackView.heightAnchor.constraint(equalToConstant: 44).isActive = true
     }
+    
+    
+    
 }

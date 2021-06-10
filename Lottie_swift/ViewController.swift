@@ -1,13 +1,15 @@
 //
 //  ViewController.swift
-//  Lottie_demo
+//  Lottie_swift
 //
 //  Created by jixiangfeng on 2021/6/10.
 //
 
 import UIKit
+import Lottie
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    let logo = AnimationView(named: "LottieLogo1")
     let tableView = UITableView(frame: .zero, style: .plain)
     let dataSource = TestCaseDataSourceProvider.dataSource()
     override func viewDidLoad() {
@@ -17,7 +19,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.title = "Lottie Test"
     }
     
+
+    
     func setupViews() -> Void {
+        self.view.addSubview(self.logo)
+        
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.rowHeight = 56

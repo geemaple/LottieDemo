@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  Lottie_Demo
+//  Lottie_swift
 //
 //  Created by jixiangfeng on 2021/6/10.
 //
