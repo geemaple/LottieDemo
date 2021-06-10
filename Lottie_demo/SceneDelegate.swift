@@ -1,12 +1,13 @@
 //
 //  SceneDelegate.swift
-//  Lottie_demo
+//  Lottie_Demo
 //
 //  Created by jixiangfeng on 2021/6/10.
 //
 
 import UIKit
 
+@available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?

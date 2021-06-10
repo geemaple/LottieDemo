@@ -3,27 +3,137 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		120A8B7A2CD61A631698E651 /* Pods_Lottie_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0F8E9ED464947091AD9DDB /* Pods_Lottie_demo.framework */; };
 		5E8FE72B2671BB8F008B9F63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8FE72A2671BB8F008B9F63 /* AppDelegate.swift */; };
-		5E8FE72D2671BB8F008B9F63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8FE72C2671BB8F008B9F63 /* SceneDelegate.swift */; };
 		5E8FE72F2671BB8F008B9F63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8FE72E2671BB8F008B9F63 /* ViewController.swift */; };
-		5E8FE7322671BB8F008B9F63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7302671BB8F008B9F63 /* Main.storyboard */; };
 		5E8FE7342671BB90008B9F63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7332671BB90008B9F63 /* Assets.xcassets */; };
-		5E8FE7372671BB90008B9F63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7352671BB90008B9F63 /* LaunchScreen.storyboard */; };
+		5E8FE74A2671C2C1008B9F63 /* AnimationExplorerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8FE7492671C2C1008B9F63 /* AnimationExplorerViewController.swift */; };
+		5E8FE7592671E8D6008B9F63 /* TestCaseDataSourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8FE7582671E8D6008B9F63 /* TestCaseDataSourceProvider.swift */; };
+		5E8FE7FA2671F2CF008B9F63 /* T.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7C72671F2CF008B9F63 /* T.json */; };
+		5E8FE7FB2671F2CF008B9F63 /* A.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7C82671F2CF008B9F63 /* A.json */; };
+		5E8FE7FC2671F2CF008B9F63 /* X.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7C92671F2CF008B9F63 /* X.json */; };
+		5E8FE7FD2671F2CF008B9F63 /* BlinkingCursor.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7CA2671F2CF008B9F63 /* BlinkingCursor.json */; };
+		5E8FE7FE2671F2CF008B9F63 /* M.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7CB2671F2CF008B9F63 /* M.json */; };
+		5E8FE7FF2671F2CF008B9F63 /* L.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7CC2671F2CF008B9F63 /* L.json */; };
+		5E8FE8002671F2CF008B9F63 /* Y.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7CD2671F2CF008B9F63 /* Y.json */; };
+		5E8FE8012671F2CF008B9F63 /* U.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7CE2671F2CF008B9F63 /* U.json */; };
+		5E8FE8022671F2CF008B9F63 /* K.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7CF2671F2CF008B9F63 /* K.json */; };
+		5E8FE8032671F2CF008B9F63 /* R.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7D02671F2CF008B9F63 /* R.json */; };
+		5E8FE8042671F2CF008B9F63 /* G.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7D12671F2CF008B9F63 /* G.json */; };
+		5E8FE8052671F2CF008B9F63 /* F.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7D22671F2CF008B9F63 /* F.json */; };
+		5E8FE8062671F2CF008B9F63 /* S.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7D32671F2CF008B9F63 /* S.json */; };
+		5E8FE8072671F2CF008B9F63 /* J.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7D42671F2CF008B9F63 /* J.json */; };
+		5E8FE8082671F2CF008B9F63 /* I.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7D52671F2CF008B9F63 /* I.json */; };
+		5E8FE8092671F2CF008B9F63 /* E.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7D62671F2CF008B9F63 /* E.json */; };
+		5E8FE80A2671F2CF008B9F63 /* Apostrophe.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7D72671F2CF008B9F63 /* Apostrophe.json */; };
+		5E8FE80B2671F2CF008B9F63 /* P.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7D82671F2CF008B9F63 /* P.json */; };
+		5E8FE80C2671F2CF008B9F63 /* Q.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7D92671F2CF008B9F63 /* Q.json */; };
+		5E8FE80D2671F2CF008B9F63 /* D.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7DA2671F2CF008B9F63 /* D.json */; };
+		5E8FE80E2671F2CF008B9F63 /* Colon.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7DB2671F2CF008B9F63 /* Colon.json */; };
+		5E8FE80F2671F2CF008B9F63 /* H.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7DC2671F2CF008B9F63 /* H.json */; };
+		5E8FE8102671F2CF008B9F63 /* C.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7DD2671F2CF008B9F63 /* C.json */; };
+		5E8FE8112671F2CF008B9F63 /* V.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7DE2671F2CF008B9F63 /* V.json */; };
+		5E8FE8122671F2CF008B9F63 /* Comma.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7DF2671F2CF008B9F63 /* Comma.json */; };
+		5E8FE8132671F2CF008B9F63 /* O.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7E02671F2CF008B9F63 /* O.json */; };
+		5E8FE8142671F2CF008B9F63 /* Z.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7E12671F2CF008B9F63 /* Z.json */; };
+		5E8FE8152671F2CF008B9F63 /* N.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7E22671F2CF008B9F63 /* N.json */; };
+		5E8FE8162671F2CF008B9F63 /* W.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7E32671F2CF008B9F63 /* W.json */; };
+		5E8FE8172671F2CF008B9F63 /* B.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7E42671F2CF008B9F63 /* B.json */; };
+		5E8FE8182671F2CF008B9F63 /* vcTransition1.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7E62671F2CF008B9F63 /* vcTransition1.json */; };
+		5E8FE8192671F2CF008B9F63 /* vcTransition2.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7E72671F2CF008B9F63 /* vcTransition2.json */; };
+		5E8FE81A2671F2CF008B9F63 /* Switch.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7E92671F2CF008B9F63 /* Switch.json */; };
+		5E8FE81B2671F2CF008B9F63 /* TwitterHeart.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7EA2671F2CF008B9F63 /* TwitterHeart.json */; };
+		5E8FE81C2671F2CF008B9F63 /* 9squares-AlBoardman.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7EB2671F2CF008B9F63 /* 9squares-AlBoardman.json */; };
+		5E8FE81D2671F2CF008B9F63 /* MotionCorpse-Jrcanest.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7EC2671F2CF008B9F63 /* MotionCorpse-Jrcanest.json */; };
+		5E8FE81E2671F2CF008B9F63 /* HamburgerArrow.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7ED2671F2CF008B9F63 /* HamburgerArrow.json */; };
+		5E8FE81F2671F2CF008B9F63 /* LottieLogo2.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7EE2671F2CF008B9F63 /* LottieLogo2.json */; };
+		5E8FE8202671F2CF008B9F63 /* Boat_Loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7EF2671F2CF008B9F63 /* Boat_Loader.json */; };
+		5E8FE8212671F2CF008B9F63 /* GeometryTransformTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7F02671F2CF008B9F63 /* GeometryTransformTest.json */; };
+		5E8FE8222671F2CF008B9F63 /* Watermelon.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7F12671F2CF008B9F63 /* Watermelon.json */; };
+		5E8FE8232671F2CF008B9F63 /* IconTransitions.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7F22671F2CF008B9F63 /* IconTransitions.json */; };
+		5E8FE8242671F2CF008B9F63 /* LottieLogo1.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7F32671F2CF008B9F63 /* LottieLogo1.json */; };
+		5E8FE8252671F2CF008B9F63 /* Switch_States.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7F42671F2CF008B9F63 /* Switch_States.json */; };
+		5E8FE8262671F2CF008B9F63 /* setValueTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7F52671F2CF008B9F63 /* setValueTest.json */; };
+		5E8FE8272671F2CF008B9F63 /* keypathTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7F62671F2CF008B9F63 /* keypathTest.json */; };
+		5E8FE8282671F2CF008B9F63 /* PinJump.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7F72671F2CF008B9F63 /* PinJump.json */; };
+		5E8FE8292671F2CF008B9F63 /* LottieLogo1_masked.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7F82671F2CF008B9F63 /* LottieLogo1_masked.json */; };
+		5E8FE82A2671F2CF008B9F63 /* timeremap.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE7F92671F2CF008B9F63 /* timeremap.json */; };
+		5E8FE8362671F542008B9F63 /* JsonExplorerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8FE8352671F542008B9F63 /* JsonExplorerViewController.swift */; };
+		5E8FE86D2671FB17008B9F63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE8692671FB17008B9F63 /* Main.storyboard */; };
+		5E8FE86E2671FB17008B9F63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FE86B2671FB17008B9F63 /* LaunchScreen.storyboard */; };
+		5E8FE8712671FB51008B9F63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8FE8702671FB51008B9F63 /* SceneDelegate.swift */; };
+		5E8FE87826720041008B9F63 /* JsonFileDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8FE87726720041008B9F63 /* JsonFileDataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10C971543E80D47A846B33FB /* Pods-Lottie_demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lottie_demo.debug.xcconfig"; path = "Target Support Files/Pods-Lottie_demo/Pods-Lottie_demo.debug.xcconfig"; sourceTree = "<group>"; };
 		5E8FE7272671BB8F008B9F63 /* Lottie_demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lottie_demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E8FE72A2671BB8F008B9F63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5E8FE72C2671BB8F008B9F63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5E8FE72E2671BB8F008B9F63 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5E8FE7312671BB8F008B9F63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5E8FE7332671BB90008B9F63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5E8FE7362671BB90008B9F63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E8FE7382671BB90008B9F63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E8FE7492671C2C1008B9F63 /* AnimationExplorerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationExplorerViewController.swift; sourceTree = "<group>"; };
+		5E8FE7582671E8D6008B9F63 /* TestCaseDataSourceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCaseDataSourceProvider.swift; sourceTree = "<group>"; };
+		5E8FE7C72671F2CF008B9F63 /* T.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = T.json; sourceTree = "<group>"; };
+		5E8FE7C82671F2CF008B9F63 /* A.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = A.json; sourceTree = "<group>"; };
+		5E8FE7C92671F2CF008B9F63 /* X.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = X.json; sourceTree = "<group>"; };
+		5E8FE7CA2671F2CF008B9F63 /* BlinkingCursor.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BlinkingCursor.json; sourceTree = "<group>"; };
+		5E8FE7CB2671F2CF008B9F63 /* M.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = M.json; sourceTree = "<group>"; };
+		5E8FE7CC2671F2CF008B9F63 /* L.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = L.json; sourceTree = "<group>"; };
+		5E8FE7CD2671F2CF008B9F63 /* Y.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Y.json; sourceTree = "<group>"; };
+		5E8FE7CE2671F2CF008B9F63 /* U.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = U.json; sourceTree = "<group>"; };
+		5E8FE7CF2671F2CF008B9F63 /* K.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = K.json; sourceTree = "<group>"; };
+		5E8FE7D02671F2CF008B9F63 /* R.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = R.json; sourceTree = "<group>"; };
+		5E8FE7D12671F2CF008B9F63 /* G.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = G.json; sourceTree = "<group>"; };
+		5E8FE7D22671F2CF008B9F63 /* F.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = F.json; sourceTree = "<group>"; };
+		5E8FE7D32671F2CF008B9F63 /* S.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = S.json; sourceTree = "<group>"; };
+		5E8FE7D42671F2CF008B9F63 /* J.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = J.json; sourceTree = "<group>"; };
+		5E8FE7D52671F2CF008B9F63 /* I.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = I.json; sourceTree = "<group>"; };
+		5E8FE7D62671F2CF008B9F63 /* E.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = E.json; sourceTree = "<group>"; };
+		5E8FE7D72671F2CF008B9F63 /* Apostrophe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Apostrophe.json; sourceTree = "<group>"; };
+		5E8FE7D82671F2CF008B9F63 /* P.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = P.json; sourceTree = "<group>"; };
+		5E8FE7D92671F2CF008B9F63 /* Q.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Q.json; sourceTree = "<group>"; };
+		5E8FE7DA2671F2CF008B9F63 /* D.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = D.json; sourceTree = "<group>"; };
+		5E8FE7DB2671F2CF008B9F63 /* Colon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Colon.json; sourceTree = "<group>"; };
+		5E8FE7DC2671F2CF008B9F63 /* H.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = H.json; sourceTree = "<group>"; };
+		5E8FE7DD2671F2CF008B9F63 /* C.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = C.json; sourceTree = "<group>"; };
+		5E8FE7DE2671F2CF008B9F63 /* V.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = V.json; sourceTree = "<group>"; };
+		5E8FE7DF2671F2CF008B9F63 /* Comma.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Comma.json; sourceTree = "<group>"; };
+		5E8FE7E02671F2CF008B9F63 /* O.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = O.json; sourceTree = "<group>"; };
+		5E8FE7E12671F2CF008B9F63 /* Z.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Z.json; sourceTree = "<group>"; };
+		5E8FE7E22671F2CF008B9F63 /* N.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = N.json; sourceTree = "<group>"; };
+		5E8FE7E32671F2CF008B9F63 /* W.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = W.json; sourceTree = "<group>"; };
+		5E8FE7E42671F2CF008B9F63 /* B.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = B.json; sourceTree = "<group>"; };
+		5E8FE7E62671F2CF008B9F63 /* vcTransition1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcTransition1.json; sourceTree = "<group>"; };
+		5E8FE7E72671F2CF008B9F63 /* vcTransition2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcTransition2.json; sourceTree = "<group>"; };
+		5E8FE7E92671F2CF008B9F63 /* Switch.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Switch.json; sourceTree = "<group>"; };
+		5E8FE7EA2671F2CF008B9F63 /* TwitterHeart.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TwitterHeart.json; sourceTree = "<group>"; };
+		5E8FE7EB2671F2CF008B9F63 /* 9squares-AlBoardman.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "9squares-AlBoardman.json"; sourceTree = "<group>"; };
+		5E8FE7EC2671F2CF008B9F63 /* MotionCorpse-Jrcanest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "MotionCorpse-Jrcanest.json"; sourceTree = "<group>"; };
+		5E8FE7ED2671F2CF008B9F63 /* HamburgerArrow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HamburgerArrow.json; sourceTree = "<group>"; };
+		5E8FE7EE2671F2CF008B9F63 /* LottieLogo2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LottieLogo2.json; sourceTree = "<group>"; };
+		5E8FE7EF2671F2CF008B9F63 /* Boat_Loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Boat_Loader.json; sourceTree = "<group>"; };
+		5E8FE7F02671F2CF008B9F63 /* GeometryTransformTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GeometryTransformTest.json; sourceTree = "<group>"; };
+		5E8FE7F12671F2CF008B9F63 /* Watermelon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Watermelon.json; sourceTree = "<group>"; };
+		5E8FE7F22671F2CF008B9F63 /* IconTransitions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = IconTransitions.json; sourceTree = "<group>"; };
+		5E8FE7F32671F2CF008B9F63 /* LottieLogo1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LottieLogo1.json; sourceTree = "<group>"; };
+		5E8FE7F42671F2CF008B9F63 /* Switch_States.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Switch_States.json; sourceTree = "<group>"; };
+		5E8FE7F52671F2CF008B9F63 /* setValueTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = setValueTest.json; sourceTree = "<group>"; };
+		5E8FE7F62671F2CF008B9F63 /* keypathTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = keypathTest.json; sourceTree = "<group>"; };
+		5E8FE7F72671F2CF008B9F63 /* PinJump.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PinJump.json; sourceTree = "<group>"; };
+		5E8FE7F82671F2CF008B9F63 /* LottieLogo1_masked.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LottieLogo1_masked.json; sourceTree = "<group>"; };
+		5E8FE7F92671F2CF008B9F63 /* timeremap.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = timeremap.json; sourceTree = "<group>"; };
+		5E8FE8352671F542008B9F63 /* JsonExplorerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonExplorerViewController.swift; sourceTree = "<group>"; };
+		5E8FE86A2671FB17008B9F63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5E8FE86C2671FB17008B9F63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5E8FE8702671FB51008B9F63 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5E8FE87726720041008B9F63 /* JsonFileDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonFileDataProvider.swift; sourceTree = "<group>"; };
+		B07B22391BF846CE6BE96EDB /* Pods-Lottie_demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lottie_demo.release.xcconfig"; path = "Target Support Files/Pods-Lottie_demo/Pods-Lottie_demo.release.xcconfig"; sourceTree = "<group>"; };
+		DB0F8E9ED464947091AD9DDB /* Pods_Lottie_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lottie_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				120A8B7A2CD61A631698E651 /* Pods_Lottie_demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +153,8 @@
 			children = (
 				5E8FE7292671BB8F008B9F63 /* Lottie_demo */,
 				5E8FE7282671BB8F008B9F63 /* Products */,
+				FC3A3C5FB364C82FFE4F4C83 /* Pods */,
+				D24EBAE58C4C34529102DA60 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +169,133 @@
 		5E8FE7292671BB8F008B9F63 /* Lottie_demo */ = {
 			isa = PBXGroup;
 			children = (
+				5E8FE7C52671F2CF008B9F63 /* Resource */,
+				5E8FE75B2671E8E6008B9F63 /* Tests */,
 				5E8FE72A2671BB8F008B9F63 /* AppDelegate.swift */,
-				5E8FE72C2671BB8F008B9F63 /* SceneDelegate.swift */,
 				5E8FE72E2671BB8F008B9F63 /* ViewController.swift */,
-				5E8FE7302671BB8F008B9F63 /* Main.storyboard */,
+				5E8FE8702671FB51008B9F63 /* SceneDelegate.swift */,
+				5E8FE7582671E8D6008B9F63 /* TestCaseDataSourceProvider.swift */,
 				5E8FE7332671BB90008B9F63 /* Assets.xcassets */,
-				5E8FE7352671BB90008B9F63 /* LaunchScreen.storyboard */,
 				5E8FE7382671BB90008B9F63 /* Info.plist */,
+				5E8FE86B2671FB17008B9F63 /* LaunchScreen.storyboard */,
+				5E8FE8692671FB17008B9F63 /* Main.storyboard */,
 			);
 			path = Lottie_demo;
+			sourceTree = "<group>";
+		};
+		5E8FE75B2671E8E6008B9F63 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5E8FE8382671F5CC008B9F63 /* AnimationExplorer */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		5E8FE7C52671F2CF008B9F63 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				5E8FE7C62671F2CF008B9F63 /* TypeFace */,
+				5E8FE7E52671F2CF008B9F63 /* Transitions */,
+				5E8FE7E82671F2CF008B9F63 /* Animations */,
+			);
+			path = Resource;
+			sourceTree = SOURCE_ROOT;
+		};
+		5E8FE7C62671F2CF008B9F63 /* TypeFace */ = {
+			isa = PBXGroup;
+			children = (
+				5E8FE7C72671F2CF008B9F63 /* T.json */,
+				5E8FE7C82671F2CF008B9F63 /* A.json */,
+				5E8FE7C92671F2CF008B9F63 /* X.json */,
+				5E8FE7CA2671F2CF008B9F63 /* BlinkingCursor.json */,
+				5E8FE7CB2671F2CF008B9F63 /* M.json */,
+				5E8FE7CC2671F2CF008B9F63 /* L.json */,
+				5E8FE7CD2671F2CF008B9F63 /* Y.json */,
+				5E8FE7CE2671F2CF008B9F63 /* U.json */,
+				5E8FE7CF2671F2CF008B9F63 /* K.json */,
+				5E8FE7D02671F2CF008B9F63 /* R.json */,
+				5E8FE7D12671F2CF008B9F63 /* G.json */,
+				5E8FE7D22671F2CF008B9F63 /* F.json */,
+				5E8FE7D32671F2CF008B9F63 /* S.json */,
+				5E8FE7D42671F2CF008B9F63 /* J.json */,
+				5E8FE7D52671F2CF008B9F63 /* I.json */,
+				5E8FE7D62671F2CF008B9F63 /* E.json */,
+				5E8FE7D72671F2CF008B9F63 /* Apostrophe.json */,
+				5E8FE7D82671F2CF008B9F63 /* P.json */,
+				5E8FE7D92671F2CF008B9F63 /* Q.json */,
+				5E8FE7DA2671F2CF008B9F63 /* D.json */,
+				5E8FE7DB2671F2CF008B9F63 /* Colon.json */,
+				5E8FE7DC2671F2CF008B9F63 /* H.json */,
+				5E8FE7DD2671F2CF008B9F63 /* C.json */,
+				5E8FE7DE2671F2CF008B9F63 /* V.json */,
+				5E8FE7DF2671F2CF008B9F63 /* Comma.json */,
+				5E8FE7E02671F2CF008B9F63 /* O.json */,
+				5E8FE7E12671F2CF008B9F63 /* Z.json */,
+				5E8FE7E22671F2CF008B9F63 /* N.json */,
+				5E8FE7E32671F2CF008B9F63 /* W.json */,
+				5E8FE7E42671F2CF008B9F63 /* B.json */,
+			);
+			path = TypeFace;
+			sourceTree = "<group>";
+		};
+		5E8FE7E52671F2CF008B9F63 /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				5E8FE7E62671F2CF008B9F63 /* vcTransition1.json */,
+				5E8FE7E72671F2CF008B9F63 /* vcTransition2.json */,
+			);
+			path = Transitions;
+			sourceTree = "<group>";
+		};
+		5E8FE7E82671F2CF008B9F63 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				5E8FE7E92671F2CF008B9F63 /* Switch.json */,
+				5E8FE7EA2671F2CF008B9F63 /* TwitterHeart.json */,
+				5E8FE7EB2671F2CF008B9F63 /* 9squares-AlBoardman.json */,
+				5E8FE7EC2671F2CF008B9F63 /* MotionCorpse-Jrcanest.json */,
+				5E8FE7ED2671F2CF008B9F63 /* HamburgerArrow.json */,
+				5E8FE7EE2671F2CF008B9F63 /* LottieLogo2.json */,
+				5E8FE7EF2671F2CF008B9F63 /* Boat_Loader.json */,
+				5E8FE7F02671F2CF008B9F63 /* GeometryTransformTest.json */,
+				5E8FE7F12671F2CF008B9F63 /* Watermelon.json */,
+				5E8FE7F22671F2CF008B9F63 /* IconTransitions.json */,
+				5E8FE7F32671F2CF008B9F63 /* LottieLogo1.json */,
+				5E8FE7F42671F2CF008B9F63 /* Switch_States.json */,
+				5E8FE7F52671F2CF008B9F63 /* setValueTest.json */,
+				5E8FE7F62671F2CF008B9F63 /* keypathTest.json */,
+				5E8FE7F72671F2CF008B9F63 /* PinJump.json */,
+				5E8FE7F82671F2CF008B9F63 /* LottieLogo1_masked.json */,
+				5E8FE7F92671F2CF008B9F63 /* timeremap.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		5E8FE8382671F5CC008B9F63 /* AnimationExplorer */ = {
+			isa = PBXGroup;
+			children = (
+				5E8FE7492671C2C1008B9F63 /* AnimationExplorerViewController.swift */,
+				5E8FE8352671F542008B9F63 /* JsonExplorerViewController.swift */,
+				5E8FE87726720041008B9F63 /* JsonFileDataProvider.swift */,
+			);
+			path = AnimationExplorer;
+			sourceTree = "<group>";
+		};
+		D24EBAE58C4C34529102DA60 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB0F8E9ED464947091AD9DDB /* Pods_Lottie_demo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC3A3C5FB364C82FFE4F4C83 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				10C971543E80D47A846B33FB /* Pods-Lottie_demo.debug.xcconfig */,
+				B07B22391BF846CE6BE96EDB /* Pods-Lottie_demo.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +305,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5E8FE73B2671BB90008B9F63 /* Build configuration list for PBXNativeTarget "Lottie_demo" */;
 			buildPhases = (
+				E007316896385BBA5D40259A /* [CP] Check Pods Manifest.lock */,
 				5E8FE7232671BB8F008B9F63 /* Sources */,
 				5E8FE7242671BB8F008B9F63 /* Frameworks */,
 				5E8FE7252671BB8F008B9F63 /* Resources */,
+				F3282F2EC39DBCFA507B4B2E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,40 +357,135 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E8FE7372671BB90008B9F63 /* LaunchScreen.storyboard in Resources */,
+				5E8FE8142671F2CF008B9F63 /* Z.json in Resources */,
+				5E8FE8192671F2CF008B9F63 /* vcTransition2.json in Resources */,
+				5E8FE8262671F2CF008B9F63 /* setValueTest.json in Resources */,
+				5E8FE80F2671F2CF008B9F63 /* H.json in Resources */,
+				5E8FE8032671F2CF008B9F63 /* R.json in Resources */,
+				5E8FE8062671F2CF008B9F63 /* S.json in Resources */,
+				5E8FE86D2671FB17008B9F63 /* Main.storyboard in Resources */,
+				5E8FE81C2671F2CF008B9F63 /* 9squares-AlBoardman.json in Resources */,
+				5E8FE80B2671F2CF008B9F63 /* P.json in Resources */,
+				5E8FE81F2671F2CF008B9F63 /* LottieLogo2.json in Resources */,
+				5E8FE8162671F2CF008B9F63 /* W.json in Resources */,
+				5E8FE8152671F2CF008B9F63 /* N.json in Resources */,
+				5E8FE7FB2671F2CF008B9F63 /* A.json in Resources */,
+				5E8FE8242671F2CF008B9F63 /* LottieLogo1.json in Resources */,
+				5E8FE80D2671F2CF008B9F63 /* D.json in Resources */,
+				5E8FE81E2671F2CF008B9F63 /* HamburgerArrow.json in Resources */,
+				5E8FE8172671F2CF008B9F63 /* B.json in Resources */,
+				5E8FE80E2671F2CF008B9F63 /* Colon.json in Resources */,
+				5E8FE8132671F2CF008B9F63 /* O.json in Resources */,
+				5E8FE8012671F2CF008B9F63 /* U.json in Resources */,
+				5E8FE8222671F2CF008B9F63 /* Watermelon.json in Resources */,
+				5E8FE80C2671F2CF008B9F63 /* Q.json in Resources */,
+				5E8FE8202671F2CF008B9F63 /* Boat_Loader.json in Resources */,
+				5E8FE8072671F2CF008B9F63 /* J.json in Resources */,
+				5E8FE8122671F2CF008B9F63 /* Comma.json in Resources */,
+				5E8FE7FD2671F2CF008B9F63 /* BlinkingCursor.json in Resources */,
+				5E8FE8292671F2CF008B9F63 /* LottieLogo1_masked.json in Resources */,
+				5E8FE7FE2671F2CF008B9F63 /* M.json in Resources */,
+				5E8FE8282671F2CF008B9F63 /* PinJump.json in Resources */,
+				5E8FE81D2671F2CF008B9F63 /* MotionCorpse-Jrcanest.json in Resources */,
+				5E8FE8102671F2CF008B9F63 /* C.json in Resources */,
+				5E8FE8212671F2CF008B9F63 /* GeometryTransformTest.json in Resources */,
+				5E8FE81A2671F2CF008B9F63 /* Switch.json in Resources */,
+				5E8FE86E2671FB17008B9F63 /* LaunchScreen.storyboard in Resources */,
 				5E8FE7342671BB90008B9F63 /* Assets.xcassets in Resources */,
-				5E8FE7322671BB8F008B9F63 /* Main.storyboard in Resources */,
+				5E8FE8002671F2CF008B9F63 /* Y.json in Resources */,
+				5E8FE7FA2671F2CF008B9F63 /* T.json in Resources */,
+				5E8FE7FC2671F2CF008B9F63 /* X.json in Resources */,
+				5E8FE80A2671F2CF008B9F63 /* Apostrophe.json in Resources */,
+				5E8FE8052671F2CF008B9F63 /* F.json in Resources */,
+				5E8FE8112671F2CF008B9F63 /* V.json in Resources */,
+				5E8FE8272671F2CF008B9F63 /* keypathTest.json in Resources */,
+				5E8FE8232671F2CF008B9F63 /* IconTransitions.json in Resources */,
+				5E8FE8082671F2CF008B9F63 /* I.json in Resources */,
+				5E8FE8092671F2CF008B9F63 /* E.json in Resources */,
+				5E8FE8022671F2CF008B9F63 /* K.json in Resources */,
+				5E8FE8042671F2CF008B9F63 /* G.json in Resources */,
+				5E8FE8252671F2CF008B9F63 /* Switch_States.json in Resources */,
+				5E8FE81B2671F2CF008B9F63 /* TwitterHeart.json in Resources */,
+				5E8FE8182671F2CF008B9F63 /* vcTransition1.json in Resources */,
+				5E8FE7FF2671F2CF008B9F63 /* L.json in Resources */,
+				5E8FE82A2671F2CF008B9F63 /* timeremap.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E007316896385BBA5D40259A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lottie_demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3282F2EC39DBCFA507B4B2E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lottie_demo/Pods-Lottie_demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lottie_demo/Pods-Lottie_demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lottie_demo/Pods-Lottie_demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5E8FE7232671BB8F008B9F63 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E8FE8362671F542008B9F63 /* JsonExplorerViewController.swift in Sources */,
+				5E8FE87826720041008B9F63 /* JsonFileDataProvider.swift in Sources */,
 				5E8FE72F2671BB8F008B9F63 /* ViewController.swift in Sources */,
 				5E8FE72B2671BB8F008B9F63 /* AppDelegate.swift in Sources */,
-				5E8FE72D2671BB8F008B9F63 /* SceneDelegate.swift in Sources */,
+				5E8FE74A2671C2C1008B9F63 /* AnimationExplorerViewController.swift in Sources */,
+				5E8FE7592671E8D6008B9F63 /* TestCaseDataSourceProvider.swift in Sources */,
+				5E8FE8712671FB51008B9F63 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5E8FE7302671BB8F008B9F63 /* Main.storyboard */ = {
+		5E8FE8692671FB17008B9F63 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5E8FE7312671BB8F008B9F63 /* Base */,
+				5E8FE86A2671FB17008B9F63 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		5E8FE7352671BB90008B9F63 /* LaunchScreen.storyboard */ = {
+		5E8FE86B2671FB17008B9F63 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5E8FE7362671BB90008B9F63 /* Base */,
+				5E8FE86C2671FB17008B9F63 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -283,11 +611,14 @@
 		};
 		5E8FE73C2671BB90008B9F63 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10C971543E80D47A846B33FB /* Pods-Lottie_demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4MUQS9BK46;
 				INFOPLIST_FILE = Lottie_demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -295,17 +626,20 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "-3.Lottie-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		5E8FE73D2671BB90008B9F63 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B07B22391BF846CE6BE96EDB /* Pods-Lottie_demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4MUQS9BK46;
 				INFOPLIST_FILE = Lottie_demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,7 +647,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "-3.Lottie-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
