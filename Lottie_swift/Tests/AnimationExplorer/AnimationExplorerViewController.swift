@@ -35,9 +35,6 @@ class AnimationExplorerViewController: UIViewController {
         self.animationPlayerView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor).isActive = true
         self.animationPlayerView.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
         self.animationPlayerView.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
-        self.animationPlayerView.bottomAnchor.constraint(lessThanOrEqualTo: self.stackView.topAnchor).isActive = true
+//        self.animationPlayerView.bottomAnchor.constraint(lessThanOrEqualTo: self.stackView.topAnchor).isActive = true
     }
-    
-    
-    
 }
