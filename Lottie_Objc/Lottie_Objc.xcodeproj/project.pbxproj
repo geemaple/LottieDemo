@@ -56,6 +56,8 @@
 		5ED78099267B478400E721FC /* PinJump.json in Resources */ = {isa = PBXBuildFile; fileRef = 5ED78068267B478400E721FC /* PinJump.json */; };
 		5ED7809A267B478400E721FC /* LottieLogo1_masked.json in Resources */ = {isa = PBXBuildFile; fileRef = 5ED78069267B478400E721FC /* LottieLogo1_masked.json */; };
 		5ED7809B267B478400E721FC /* timeremap.json in Resources */ = {isa = PBXBuildFile; fileRef = 5ED7806A267B478400E721FC /* timeremap.json */; };
+		5ED780A1267B52FF00E721FC /* AnimatedTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7809D267B52FF00E721FC /* AnimatedTextField.m */; };
+		5ED780A2267B52FF00E721FC /* TypingDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED780A0267B52FF00E721FC /* TypingDemoViewController.m */; };
 		5EF2E53B267AFCAD003E8285 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2E53A267AFCAD003E8285 /* AppDelegate.m */; };
 		5EF2E53E267AFCAD003E8285 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2E53D267AFCAD003E8285 /* SceneDelegate.m */; };
 		5EF2E544267AFCAD003E8285 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EF2E542267AFCAD003E8285 /* Main.storyboard */; };
@@ -120,6 +122,10 @@
 		5ED78068267B478400E721FC /* PinJump.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PinJump.json; sourceTree = "<group>"; };
 		5ED78069267B478400E721FC /* LottieLogo1_masked.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LottieLogo1_masked.json; sourceTree = "<group>"; };
 		5ED7806A267B478400E721FC /* timeremap.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = timeremap.json; sourceTree = "<group>"; };
+		5ED7809D267B52FF00E721FC /* AnimatedTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedTextField.m; sourceTree = "<group>"; };
+		5ED7809E267B52FF00E721FC /* TypingDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypingDemoViewController.h; sourceTree = "<group>"; };
+		5ED7809F267B52FF00E721FC /* AnimatedTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedTextField.h; sourceTree = "<group>"; };
+		5ED780A0267B52FF00E721FC /* TypingDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypingDemoViewController.m; sourceTree = "<group>"; };
 		5EF2E536267AFCAD003E8285 /* Lottie_objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lottie_objc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF2E539267AFCAD003E8285 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5EF2E53A267AFCAD003E8285 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -235,6 +241,17 @@
 			path = Animations;
 			sourceTree = "<group>";
 		};
+		5ED7809C267B52E500E721FC /* Typing Animation Demo */ = {
+			isa = PBXGroup;
+			children = (
+				5ED7809F267B52FF00E721FC /* AnimatedTextField.h */,
+				5ED7809D267B52FF00E721FC /* AnimatedTextField.m */,
+				5ED7809E267B52FF00E721FC /* TypingDemoViewController.h */,
+				5ED780A0267B52FF00E721FC /* TypingDemoViewController.m */,
+			);
+			path = "Typing Animation Demo";
+			sourceTree = "<group>";
+		};
 		5EF2E52D267AFCAC003E8285 = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +273,7 @@
 		5EF2E538267AFCAD003E8285 /* Lottie_objc */ = {
 			isa = PBXGroup;
 			children = (
+				5ED7809C267B52E500E721FC /* Typing Animation Demo */,
 				5ED78036267B478400E721FC /* Resources */,
 				5EF2E67A267B426A003E8285 /* Animation Explorer */,
 				5EF2E539267AFCAD003E8285 /* AppDelegate.h */,
@@ -467,6 +485,8 @@
 			files = (
 				5EF2E682267B428C003E8285 /* AnimationExplorerViewController.m in Sources */,
 				5EF2E6F1267B448F003E8285 /* LottieRootViewController.m in Sources */,
+				5ED780A2267B52FF00E721FC /* TypingDemoViewController.m in Sources */,
+				5ED780A1267B52FF00E721FC /* AnimatedTextField.m in Sources */,
 				5EF2E53B267AFCAD003E8285 /* AppDelegate.m in Sources */,
 				5EF2E681267B428C003E8285 /* JSONExplorerViewController.m in Sources */,
 				5EF2E683267B428C003E8285 /* LAQRScannerViewController.m in Sources */,
