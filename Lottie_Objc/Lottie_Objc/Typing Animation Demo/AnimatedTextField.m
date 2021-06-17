@@ -167,7 +167,7 @@
 - (void)changeInput:(NSString *)oldText charactersInRange:(NSRange)range toString:(NSString *)replacementString {
   
   NSMutableString *newText = [oldText mutableCopy];
-  if (range.location > 0) {
+  if (range.location >= 0) {
      [newText replaceCharactersInRange:range withString:replacementString];
   }
   
@@ -274,7 +274,7 @@
                            cellForItemAtIndexPath:(NSIndexPath *)indexPath {
   LACharacterCell *charCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"char" forIndexPath:indexPath];
   charCell.layer.borderColor = UIColor.redColor.CGColor;
-  charCell.layer.borderWidth = 1.f;
+  charCell.layer.borderWidth = _enableDebuging ? 1.0 : 0.0;
   return charCell;
 }
 
@@ -312,6 +312,14 @@
                    layout:(UICollectionViewLayout *)collectionViewLayout
                    minimumLineSpacingForSectionAtIndex:(NSInteger)section {
   return 0;
+}
+
+- (void)setEnableDebuging:(BOOL)enableDebuging {
+  _enableDebuging = enableDebuging;
+  for (UICollectionViewCell *cell in [_collectionView visibleCells]) {
+    cell.layer.borderColor = UIColor.redColor.CGColor;
+    cell.layer.borderWidth = enableDebuging ? 1.0 : 0.0;
+  }
 }
 
 @end

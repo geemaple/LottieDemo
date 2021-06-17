@@ -22,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
   self.view.backgroundColor = [UIColor whiteColor];
+  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"DEBUG" style:UIBarButtonItemStylePlain target:self action:@selector(enableDebuging)];
   
   textField_ = [[AnimatedTextField alloc] initWithFrame:self.view.bounds];
   [self.view addSubview:textField_];
@@ -70,4 +71,7 @@
   textField_.fontSize = fontSlider_.value;
 }
 
+- (void)enableDebuging {
+  textField_.enableDebuging = !textField_.enableDebuging;
+}
 @end

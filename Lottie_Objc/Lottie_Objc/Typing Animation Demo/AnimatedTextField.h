@@ -13,6 +13,7 @@
 @property (nonatomic, assign) NSInteger fontSize;
 @property (nonatomic, copy) NSString *text;
 @property (nonatomic, assign) UIEdgeInsets scrollInsets;
+@property (nonatomic, assign) BOOL enableDebuging;
 
 - (void)changeInput:(NSString *)oldText charactersInRange:(NSRange)range toString:(NSString *)replacementString;
 
