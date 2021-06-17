@@ -62,5 +62,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
+  <key>NSCameraUsageDescription</key>
+  <string>Lottie needs to access your camera to complete this operation</string>
 </dict>
 </plist>
