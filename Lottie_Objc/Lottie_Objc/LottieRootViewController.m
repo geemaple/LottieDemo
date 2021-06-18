@@ -46,23 +46,21 @@
   BOOL isDebuging = !CATransform3DIsIdentity(target.sublayerTransform);
   
   CATransform3D perspective = CATransform3DIdentity;
-  if (isDebuging == NO) {
-    perspective.m34 = -1.0 / 1000;
-    perspective = CATransform3DRotate(perspective, M_PI / 4, 0, 1, 0);
-  }
+  perspective.m34 = -1.0 / 1000;
   
+  self.view.layer.sublayerTransform = CATransform3DRotate(perspective, M_PI / 4, 0, 1, 0);
   [self levelTravelLayer:self.view.layer transform:perspective borderLayer:isDebuging];
 }
 
 - (void)levelTravelLayer:(CALayer *)layer transform:(CATransform3D)perspective borderLayer:(BOOL)borderLayer {
-  layer.sublayerTransform = perspective;
   
-  NSMutableArray *queue = [[NSMutableArray alloc] initWithObjects:layer, nil];
+  NSMutableArray *queue = [[NSMutableArray alloc] initWithArray:layer.sublayers];
   while (queue.count > 0) {
     NSUInteger count = queue.count;
     for (int i = 0; i < count; i++) {
       CALayer *sub = [queue firstObject];
       [queue removeObjectAtIndex:0];
+      sub.sublayerTransform = perspective;
       sub.borderWidth = borderLayer ? 1.f : 0.f;
       sub.borderColor = [[self randomColorWithAlpha:1] CGColor];
       [queue addObjectsFromArray:sub.sublayers];
