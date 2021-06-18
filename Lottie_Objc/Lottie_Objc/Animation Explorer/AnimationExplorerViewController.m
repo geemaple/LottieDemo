@@ -23,6 +23,8 @@ typedef enum : NSUInteger {
 @property (nonatomic, assign) ViewBackgroundColor currentBGColor;
 @property (nonatomic, strong) UIToolbar *toolbar;
 @property (nonatomic, strong) UISlider *slider;
+@property (nonatomic, strong) UISlider *zSlider;
+@property (nonatomic, strong) UISlider *rotateSlider;
 @property (nonatomic, strong) LOTAnimationView *laAnimation;
 
 @end
@@ -55,6 +57,8 @@ typedef enum : NSUInteger {
 - (void)viewDidLoad {
   [super viewDidLoad];
   
+  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"RESET" style:UIBarButtonItemStylePlain target:self action:@selector(resetPerspective)];
+  
   self.currentBGColor = ViewBackgroundColorWhite;
   self.toolbar = [[UIToolbar alloc] initWithFrame:CGRectZero];
   
@@ -76,11 +80,92 @@ typedef enum : NSUInteger {
   self.slider.maximumValue = 1;
   [self.view addSubview:self.slider];
   
-  [self _loadAnimationNamed:@"LottieLogo2"];
+  self.rotateSlider = [[UISlider alloc] initWithFrame:CGRectZero];
+  [self.rotateSlider addTarget:self action:@selector(_rotateChanged:) forControlEvents:UIControlEventValueChanged];
+  self.rotateSlider.minimumValue = 0;
+  self.rotateSlider.maximumValue = M_PI / 3;
+  self.rotateSlider.value = 0;
+  [self.view addSubview:self.rotateSlider];
+  
+  self.zSlider = [[UISlider alloc] initWithFrame:CGRectZero];
+  [self.zSlider addTarget:self action:@selector(_zSliderChanged:) forControlEvents:UIControlEventValueChanged];
+  self.zSlider.minimumValue = 0;
+  self.zSlider.maximumValue = 2;
+  self.zSlider.value = 0;
+  [self.view addSubview:self.zSlider];
+  
+  [self _loadAnimationNamed:@"LottieLogo1"];
+  [self.laAnimation play];
+}
+
+- (void)resetPerspective {
+  self.rotateSlider.value = self.rotateSlider.minimumValue;
+  self.zSlider.value = self.zSlider.minimumValue;
+  
+  CALayer *target = self.laAnimation.layer;
+  
+  CATransform3D perspective = CATransform3DIdentity;
+
+  target.sublayerTransform = perspective;
+  [self levelTravelLayer:target transform:perspective zIndexScale:self.zSlider.value];
+}
+
+- (void)debugPerspective {
+  CALayer *target = self.laAnimation.layer;
+  
+  CATransform3D perspective = CATransform3DIdentity;
+  perspective.m34 = -1.0 / 1000;
+  perspective = CATransform3DRotate(perspective, self.rotateSlider.value, 0, 1, 0);
+
+  target.sublayerTransform = perspective;
+  [self levelTravelLayer:target transform:perspective zIndexScale:self.zSlider.value];
+}
+
+- (void)levelTravelLayer:(CALayer *)layer transform:(CATransform3D)perspective zIndexScale:(CGFloat)zIndexScale{
+  layer.masksToBounds = YES;
+  NSMutableArray *queue = [[NSMutableArray alloc] initWithArray:layer.sublayers];
+  NSInteger level = 0;
+  while (queue.count > 0) {
+    NSUInteger count = queue.count;
+    for (int i = 0; i < count; i++) {
+      CALayer *sub = [queue firstObject];
+      [queue removeObjectAtIndex:0];
+      sub.sublayerTransform = perspective;
+      sub.borderColor = [[self brightRandomColorWithAlpha:0.5] CGColor];
+      sub.borderWidth = zIndexScale > 0 ? 1.f : 0.f;
+      sub.zPosition = (level + i) * zIndexScale;
+      NSLog(@"zPosition = %@ bounds = %@", @(sub.zPosition), NSStringFromCGRect(sub.bounds));
+      [queue addObjectsFromArray:sub.sublayers];
+    }
+    level += count;
+  }
+}
+
+- (UIColor *)brightRandomColorWithAlpha:(CGFloat)alpha {
+  
+  while (YES) {
+    CGFloat red =  (CGFloat)arc4random()/(CGFloat)RAND_MAX;
+    CGFloat blue = (CGFloat)arc4random()/(CGFloat)RAND_MAX;
+    CGFloat green = (CGFloat)arc4random()/(CGFloat)RAND_MAX;
+    CGFloat gray = 0.299 * red + 0.587 * green + 0.114 * blue;
+    if (gray < 0.6) {
+      return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
+    }
+  }
 }
 
 - (UIBarButtonItem *)flexItem {
   return [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+}
+
+- (void)_rotateChanged:(UISlider *)slider {
+  [self showMessage:[NSString stringWithFormat:@"旋转%@", @(slider.value)]];
+  [self debugPerspective];
+}
+
+- (void)_zSliderChanged:(UISlider *)slider {
+  [self showMessage:[NSString stringWithFormat:@"ZIndex Scale=%@", @(slider.value)]];
+  [self debugPerspective];
 }
 
 - (void)resetAllButtons {
@@ -99,16 +184,14 @@ typedef enum : NSUInteger {
 
 - (void)viewWillLayoutSubviews {
   [super viewWillLayoutSubviews];
-  CGRect b = self.view.bounds;
-  CGFloat safeAreaBottomInset = 0;
-  if (@available(iOS 11.0, *)) {
-    safeAreaBottomInset = self.view.safeAreaInsets.bottom;
-  }
-  self.toolbar.frame = CGRectMake(0, b.size.height - 44 - safeAreaBottomInset, b.size.width, 44);
-  CGSize sliderSize = [self.slider sizeThatFits:b.size];
-  sliderSize.height += 12;
-  self.slider.frame = CGRectMake(30, CGRectGetMinY(self.toolbar.frame) - sliderSize.height, b.size.width - 60, sliderSize.height);
-  self.laAnimation.frame = CGRectMake(0, 0, b.size.width, CGRectGetMinY(self.slider.frame));
+
+  self.toolbar.frame = CGRectMake(0, self.view.bounds.size.height - 44 - self.view.safeAreaInsets.bottom, self.view.bounds.size.width, 44);
+
+  CGFloat sliderHeight = 44.f;
+  self.slider.frame = CGRectMake(30, CGRectGetMinY(self.toolbar.frame) - sliderHeight, self.view.bounds.size.width - 60, sliderHeight);
+  self.rotateSlider.frame = CGRectMake(30, CGRectGetMinY(self.slider.frame) - sliderHeight, self.view.bounds.size.width - 60, sliderHeight);
+  self.zSlider.frame = CGRectMake(30, CGRectGetMinY(self.rotateSlider.frame) - sliderHeight, self.view.bounds.size.width - 60, sliderHeight);
+  self.laAnimation.frame = CGRectMake(0, self.view.safeAreaInsets.top, self.view.bounds.size.width, CGRectGetMinY(self.zSlider.frame) - self.view.safeAreaInsets.top);
 }
 
 - (void)_sliderChanged:(UISlider *)slider {
@@ -174,24 +257,26 @@ typedef enum : NSUInteger {
 }
 
 - (void)_loadAnimationFromURLString:(NSString *)URL {
+  [self resetPerspective];
   [self.laAnimation removeFromSuperview];
   self.laAnimation = nil;
   [self resetAllButtons];
   
   self.laAnimation = [[LOTAnimationView alloc] initWithContentsOfURL:[NSURL URLWithString:URL]];
   self.laAnimation.contentMode = UIViewContentModeScaleAspectFit;
-  [self.view addSubview:self.laAnimation];
+  [self.view insertSubview:self.laAnimation atIndex:0];
   [self.view setNeedsLayout];
 }
 
 - (void)_loadAnimationNamed:(NSString *)named {
+  [self resetPerspective];
   [self.laAnimation removeFromSuperview];
   self.laAnimation = nil;
   [self resetAllButtons];
   
   self.laAnimation = [LOTAnimationView animationNamed:named];
   self.laAnimation.contentMode = UIViewContentModeScaleAspectFit;
-  [self.view addSubview:self.laAnimation];
+  [self.view insertSubview:self.laAnimation atIndex:0];
   [self.view setNeedsLayout];
 }
 
@@ -226,7 +311,10 @@ typedef enum : NSUInteger {
 }
 
 - (void)_setSpeed:(UIBarButtonItem *)button {
-  if (self.laAnimation.animationSpeed < 3) {
+  
+  if (self.laAnimation.animationSpeed == 1) {
+    self.laAnimation.animationSpeed = 0.5;
+  } else if (self.laAnimation.animationSpeed < 3) {
     self.laAnimation.animationSpeed += 1;
   } else {
     self.laAnimation.animationSpeed = 1;
@@ -235,28 +323,7 @@ typedef enum : NSUInteger {
 }
 
 - (void)showMessage:(NSString *)message {
-  UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-  messageLabel.textAlignment = NSTextAlignmentCenter;
-  messageLabel.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
-  messageLabel.textColor = [UIColor whiteColor];
-  messageLabel.text = message;
-  
-  CGSize messageSize = [messageLabel sizeThatFits:self.view.bounds.size];
-  messageSize.width += 14;
-  messageSize.height += 14;
-  messageLabel.frame = CGRectMake(10, self.view.safeAreaInsets.top + 30, messageSize.width, messageSize.height);
-  messageLabel.alpha = 0;
-  [self.view addSubview:messageLabel];
-  
-  [UIView animateWithDuration:0.3 animations:^{
-    messageLabel.alpha = 1;
-  } completion:^(BOOL finished) {
-    [UIView animateWithDuration:0.3 delay:1 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-      messageLabel.alpha = 0;
-    } completion:^(BOOL finished) {
-      [messageLabel removeFromSuperview];
-    }];
-  }];
+  self.title = message;
 }
 
 @end
