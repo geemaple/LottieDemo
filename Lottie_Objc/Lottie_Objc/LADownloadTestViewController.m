@@ -96,7 +96,9 @@ didFinishDownloadingToURL:(nonnull NSURL *)location {
       didWriteData:(int64_t)bytesWritten
  totalBytesWritten:(int64_t)totalBytesWritten
 totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite {
-    _positionInterpolator.currentProgress = (CGFloat)totalBytesWritten / (CGFloat)totalBytesExpectedToWrite;
+  int64_t progress = totalBytesWritten * 100 / totalBytesExpectedToWrite;
+  _positionInterpolator.currentProgress = (CGFloat)(progress) / 100;
+  NSLog(@"currentProgress = %f", _positionInterpolator.currentProgress);
 }
 
 @end

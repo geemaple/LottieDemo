@@ -1,5 +1,5 @@
 //
-//  LAInteractiveTestViewController.h
+//  LADynamicImageViewController.h
 //  Lottie_objc
 //
 //  Created by jixiangfeng on 2021/6/18.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LAInteractiveTestViewController : UIViewController
+@interface LADynamicImageViewController : UIViewController
 
 @end
 

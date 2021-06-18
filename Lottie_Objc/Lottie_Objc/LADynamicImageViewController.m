@@ -1,13 +1,13 @@
 //
-//  LAInteractiveTestViewController.m
+//  LADynamicImageViewController.m
 //  Lottie_objc
 //
 //  Created by jixiangfeng on 2021/6/18.
 //
 
-#import "LAInteractiveTestViewController.h"
+#import "LADynamicImageViewController.h"
 
-@implementation LAInteractiveTestViewController
+@implementation LADynamicImageViewController
 
 - (void)viewDidLoad {
   [super viewDidLoad];

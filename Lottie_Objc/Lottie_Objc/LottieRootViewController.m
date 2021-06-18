@@ -65,14 +65,14 @@
                             @"vc" : @"AnimationExplorerViewController"},
                           @{@"name" : @"Animated Keyboard",
                             @"vc" : @"TypingDemoViewController"},
-                          @{@"name" : @"Animated Transitions Demo",
+                          @{@"name" : @"Animated Transitions(Objc Only)",
                             @"vc" : @"AnimationTransitionViewController"},
-                          @{@"name" : @"Animated UIControls Demo",
+                          @{@"name" : @"Animated UIControls",
                             @"vc" : @"LAControlsViewController"},
-                          @{@"name" : @"Download Progress Demo",
+                          @{@"name" : @"Download Progress",
                             @"vc" : @"LADownloadTestViewController"},
-                          @{@"name" : @"Interactive Demo",
-                            @"vc" : @"LAInteractiveTestViewController"},];
+                          @{@"name" : @"Dynamic Image",
+                            @"vc" : @"LADynamicImageViewController"},];
 }
 
 - (void)_playLottieAnimation {

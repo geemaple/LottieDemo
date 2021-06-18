@@ -60,7 +60,7 @@
 		5ED780A2267B52FF00E721FC /* TypingDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED780A0267B52FF00E721FC /* TypingDemoViewController.m */; };
 		5ED780AB267C4C6E00E721FC /* LADownloadTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED780A7267C4C6D00E721FC /* LADownloadTestViewController.m */; };
 		5ED780AC267C4C6E00E721FC /* LAControlsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED780AA267C4C6E00E721FC /* LAControlsViewController.m */; };
-		5ED780AF267C7E2B00E721FC /* LAInteractiveTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED780AE267C7E2B00E721FC /* LAInteractiveTestViewController.m */; };
+		5ED780AF267C7E2B00E721FC /* LADynamicImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED780AE267C7E2B00E721FC /* LADynamicImageViewController.m */; };
 		5ED780B3267C7F5400E721FC /* AnimationTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED780B2267C7F5400E721FC /* AnimationTransitionViewController.m */; };
 		5EF2E53B267AFCAD003E8285 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2E53A267AFCAD003E8285 /* AppDelegate.m */; };
 		5EF2E53E267AFCAD003E8285 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2E53D267AFCAD003E8285 /* SceneDelegate.m */; };
@@ -134,8 +134,8 @@
 		5ED780A8267C4C6D00E721FC /* LAControlsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAControlsViewController.h; sourceTree = "<group>"; };
 		5ED780A9267C4C6E00E721FC /* LADownloadTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LADownloadTestViewController.h; sourceTree = "<group>"; };
 		5ED780AA267C4C6E00E721FC /* LAControlsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAControlsViewController.m; sourceTree = "<group>"; };
-		5ED780AD267C7E2B00E721FC /* LAInteractiveTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LAInteractiveTestViewController.h; sourceTree = "<group>"; };
-		5ED780AE267C7E2B00E721FC /* LAInteractiveTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LAInteractiveTestViewController.m; sourceTree = "<group>"; };
+		5ED780AD267C7E2B00E721FC /* LADynamicImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LADynamicImageViewController.h; sourceTree = "<group>"; };
+		5ED780AE267C7E2B00E721FC /* LADynamicImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LADynamicImageViewController.m; sourceTree = "<group>"; };
 		5ED780B1267C7F5400E721FC /* AnimationTransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationTransitionViewController.h; sourceTree = "<group>"; };
 		5ED780B2267C7F5400E721FC /* AnimationTransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationTransitionViewController.m; sourceTree = "<group>"; };
 		5EF2E536267AFCAD003E8285 /* Lottie_objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lottie_objc.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -308,8 +308,8 @@
 				5ED780AA267C4C6E00E721FC /* LAControlsViewController.m */,
 				5ED780A9267C4C6E00E721FC /* LADownloadTestViewController.h */,
 				5ED780A7267C4C6D00E721FC /* LADownloadTestViewController.m */,
-				5ED780AD267C7E2B00E721FC /* LAInteractiveTestViewController.h */,
-				5ED780AE267C7E2B00E721FC /* LAInteractiveTestViewController.m */,
+				5ED780AD267C7E2B00E721FC /* LADynamicImageViewController.h */,
+				5ED780AE267C7E2B00E721FC /* LADynamicImageViewController.m */,
 				5EF2E542267AFCAD003E8285 /* Main.storyboard */,
 				5EF2E545267AFCAF003E8285 /* Assets.xcassets */,
 				5EF2E547267AFCAF003E8285 /* LaunchScreen.storyboard */,
@@ -518,7 +518,7 @@
 				5ED780AB267C4C6E00E721FC /* LADownloadTestViewController.m in Sources */,
 				5ED780A1267B52FF00E721FC /* AnimatedTextField.m in Sources */,
 				5ED780B3267C7F5400E721FC /* AnimationTransitionViewController.m in Sources */,
-				5ED780AF267C7E2B00E721FC /* LAInteractiveTestViewController.m in Sources */,
+				5ED780AF267C7E2B00E721FC /* LADynamicImageViewController.m in Sources */,
 				5EF2E53B267AFCAD003E8285 /* AppDelegate.m in Sources */,
 				5EF2E681267B428C003E8285 /* JSONExplorerViewController.m in Sources */,
 				5EF2E683267B428C003E8285 /* LAQRScannerViewController.m in Sources */,
