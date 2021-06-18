@@ -66,7 +66,7 @@
                           @{@"name" : @"Animated Keyboard",
                             @"vc" : @"TypingDemoViewController"},
                           @{@"name" : @"Animated Transitions Demo",
-                            @"vc" : @"AnimationTransitionViewController"},
+                            @"vc" : @"AnimationTransitionViewController"}, //TBD
                           @{@"name" : @"Animated UIControls Demo",
                             @"vc" : @"LAControlsViewController"},
                           @{@"name" : @"Download Progress Demo",

@@ -58,6 +58,9 @@
 		5ED7809B267B478400E721FC /* timeremap.json in Resources */ = {isa = PBXBuildFile; fileRef = 5ED7806A267B478400E721FC /* timeremap.json */; };
 		5ED780A1267B52FF00E721FC /* AnimatedTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7809D267B52FF00E721FC /* AnimatedTextField.m */; };
 		5ED780A2267B52FF00E721FC /* TypingDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED780A0267B52FF00E721FC /* TypingDemoViewController.m */; };
+		5ED780A6267C413A00E721FC /* AnimationTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED780A5267C413A00E721FC /* AnimationTransitionViewController.m */; };
+		5ED780AB267C4C6E00E721FC /* LADownloadTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED780A7267C4C6D00E721FC /* LADownloadTestViewController.m */; };
+		5ED780AC267C4C6E00E721FC /* LAControlsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED780AA267C4C6E00E721FC /* LAControlsViewController.m */; };
 		5EF2E53B267AFCAD003E8285 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2E53A267AFCAD003E8285 /* AppDelegate.m */; };
 		5EF2E53E267AFCAD003E8285 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2E53D267AFCAD003E8285 /* SceneDelegate.m */; };
 		5EF2E544267AFCAD003E8285 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EF2E542267AFCAD003E8285 /* Main.storyboard */; };
@@ -126,6 +129,12 @@
 		5ED7809E267B52FF00E721FC /* TypingDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypingDemoViewController.h; sourceTree = "<group>"; };
 		5ED7809F267B52FF00E721FC /* AnimatedTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedTextField.h; sourceTree = "<group>"; };
 		5ED780A0267B52FF00E721FC /* TypingDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypingDemoViewController.m; sourceTree = "<group>"; };
+		5ED780A4267C413A00E721FC /* AnimationTransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationTransitionViewController.h; sourceTree = "<group>"; };
+		5ED780A5267C413A00E721FC /* AnimationTransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationTransitionViewController.m; sourceTree = "<group>"; };
+		5ED780A7267C4C6D00E721FC /* LADownloadTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LADownloadTestViewController.m; sourceTree = "<group>"; };
+		5ED780A8267C4C6D00E721FC /* LAControlsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAControlsViewController.h; sourceTree = "<group>"; };
+		5ED780A9267C4C6E00E721FC /* LADownloadTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LADownloadTestViewController.h; sourceTree = "<group>"; };
+		5ED780AA267C4C6E00E721FC /* LAControlsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAControlsViewController.m; sourceTree = "<group>"; };
 		5EF2E536267AFCAD003E8285 /* Lottie_objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lottie_objc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF2E539267AFCAD003E8285 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5EF2E53A267AFCAD003E8285 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -252,6 +261,15 @@
 			path = "Typing Animation Demo";
 			sourceTree = "<group>";
 		};
+		5ED780A3267C412800E721FC /* Transition Demo */ = {
+			isa = PBXGroup;
+			children = (
+				5ED780A4267C413A00E721FC /* AnimationTransitionViewController.h */,
+				5ED780A5267C413A00E721FC /* AnimationTransitionViewController.m */,
+			);
+			path = "Transition Demo";
+			sourceTree = "<group>";
+		};
 		5EF2E52D267AFCAC003E8285 = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +291,7 @@
 		5EF2E538267AFCAD003E8285 /* Lottie_objc */ = {
 			isa = PBXGroup;
 			children = (
+				5ED780A3267C412800E721FC /* Transition Demo */,
 				5ED7809C267B52E500E721FC /* Typing Animation Demo */,
 				5ED78036267B478400E721FC /* Resources */,
 				5EF2E67A267B426A003E8285 /* Animation Explorer */,
@@ -282,6 +301,10 @@
 				5EF2E53D267AFCAD003E8285 /* SceneDelegate.m */,
 				5EF2E6EF267B448F003E8285 /* LottieRootViewController.h */,
 				5EF2E6F0267B448F003E8285 /* LottieRootViewController.m */,
+				5ED780A8267C4C6D00E721FC /* LAControlsViewController.h */,
+				5ED780AA267C4C6E00E721FC /* LAControlsViewController.m */,
+				5ED780A9267C4C6E00E721FC /* LADownloadTestViewController.h */,
+				5ED780A7267C4C6D00E721FC /* LADownloadTestViewController.m */,
 				5EF2E542267AFCAD003E8285 /* Main.storyboard */,
 				5EF2E545267AFCAF003E8285 /* Assets.xcassets */,
 				5EF2E547267AFCAF003E8285 /* LaunchScreen.storyboard */,
@@ -484,9 +507,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EF2E682267B428C003E8285 /* AnimationExplorerViewController.m in Sources */,
+				5ED780AC267C4C6E00E721FC /* LAControlsViewController.m in Sources */,
 				5EF2E6F1267B448F003E8285 /* LottieRootViewController.m in Sources */,
 				5ED780A2267B52FF00E721FC /* TypingDemoViewController.m in Sources */,
+				5ED780AB267C4C6E00E721FC /* LADownloadTestViewController.m in Sources */,
 				5ED780A1267B52FF00E721FC /* AnimatedTextField.m in Sources */,
+				5ED780A6267C413A00E721FC /* AnimationTransitionViewController.m in Sources */,
 				5EF2E53B267AFCAD003E8285 /* AppDelegate.m in Sources */,
 				5EF2E681267B428C003E8285 /* JSONExplorerViewController.m in Sources */,
 				5EF2E683267B428C003E8285 /* LAQRScannerViewController.m in Sources */,
