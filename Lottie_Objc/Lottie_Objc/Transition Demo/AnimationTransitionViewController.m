@@ -49,7 +49,7 @@
 }
 
 - (void)_close {
-  [self dismissViewControllerAnimated:YES completion:NULL];
+  [self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
 }
 
 @end
@@ -64,7 +64,6 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  
   
   self.button1 = [UIButton buttonWithType:UIButtonTypeSystem];
   [self.button1 setTitle:@"Show Transition A" forState:UIControlStateNormal];
@@ -91,11 +90,11 @@
   buttonSize.height += 20;
   self.button1.bounds = CGRectMake(0, 0, buttonSize.width, buttonSize.height);
   self.button1.center = self.view.center;
-
 }
 
 - (void)_showTransitionA {
   ToAnimationViewController *vc = [[ToAnimationViewController alloc] init];
+  vc.modalPresentationStyle = UIModalPresentationFullScreen;
   vc.transitioningDelegate = self;
   [self presentViewController:vc animated:YES completion:NULL];
 }

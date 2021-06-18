@@ -66,11 +66,13 @@
                           @{@"name" : @"Animated Keyboard",
                             @"vc" : @"TypingDemoViewController"},
                           @{@"name" : @"Animated Transitions Demo",
-                            @"vc" : @"AnimationTransitionViewController"}, //TBD
+                            @"vc" : @"AnimationTransitionViewController"},
                           @{@"name" : @"Animated UIControls Demo",
                             @"vc" : @"LAControlsViewController"},
                           @{@"name" : @"Download Progress Demo",
-                            @"vc" : @"LADownloadTestViewController"}];
+                            @"vc" : @"LADownloadTestViewController"},
+                          @{@"name" : @"Interactive Demo",
+                            @"vc" : @"LAInteractiveTestViewController"},];
 }
 
 - (void)_playLottieAnimation {
@@ -101,6 +103,7 @@
     UIViewController *vc = [[vcClass alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
   }
+  
   [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 

@@ -8,7 +8,7 @@
 
 #import "LOTAnimationTransitionController.h"
 #import "LOTAnimationView.h"
-
+static const NSTimeInterval kAnimationDurationTimeInterval = .5;
 @implementation LOTAnimationTransitionController {
   LOTAnimationView *transitionAnimationView_;
   NSString *fromLayerName_;
@@ -45,10 +45,12 @@
 }
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
+  return kAnimationDurationTimeInterval;
   return transitionAnimationView_.animationDuration;
 }
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
+    
   UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
   UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
   UIView *containerView = transitionContext.containerView;
