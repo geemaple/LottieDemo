@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0522EE09267F9EDA0046B1C4 /* CardAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 0522EE08267F9EDA0046B1C4 /* CardAnimation.json */; };
 		5ED7806B267B478400E721FC /* T.json in Resources */ = {isa = PBXBuildFile; fileRef = 5ED78038267B478400E721FC /* T.json */; };
 		5ED7806C267B478400E721FC /* A.json in Resources */ = {isa = PBXBuildFile; fileRef = 5ED78039267B478400E721FC /* A.json */; };
 		5ED7806D267B478400E721FC /* X.json in Resources */ = {isa = PBXBuildFile; fileRef = 5ED7803A267B478400E721FC /* X.json */; };
@@ -76,6 +77,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0522EE08267F9EDA0046B1C4 /* CardAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CardAnimation.json; sourceTree = "<group>"; };
 		4B0E252EECB8FF1D6E9178BF /* Pods-Lottie_objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lottie_objc.release.xcconfig"; path = "Target Support Files/Pods-Lottie_objc/Pods-Lottie_objc.release.xcconfig"; sourceTree = "<group>"; };
 		5ED78038267B478400E721FC /* T.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = T.json; sourceTree = "<group>"; };
 		5ED78039267B478400E721FC /* A.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = A.json; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 		5ED78059267B478400E721FC /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				0522EE08267F9EDA0046B1C4 /* CardAnimation.json */,
 				5ED7805A267B478400E721FC /* Switch.json */,
 				5ED7805B267B478400E721FC /* TwitterHeart.json */,
 				5ED7805C267B478400E721FC /* 9squares-AlBoardman.json */,
@@ -452,6 +455,7 @@
 				5ED78079267B478400E721FC /* I.json in Resources */,
 				5ED7807A267B478400E721FC /* E.json in Resources */,
 				5ED78073267B478400E721FC /* K.json in Resources */,
+				0522EE09267F9EDA0046B1C4 /* CardAnimation.json in Resources */,
 				5ED78075267B478400E721FC /* G.json in Resources */,
 				5ED78096267B478400E721FC /* Switch_States.json in Resources */,
 				5ED7808C267B478400E721FC /* TwitterHeart.json in Resources */,

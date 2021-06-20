@@ -9,7 +9,7 @@
 #import "LAControlsViewController.h"
 #import <Lottie/Lottie.h>
 
-@interface LAControlsViewController ()
+@interface LAControlsViewController ()<LOTColorValueDelegate>
 
 @property (nonatomic, strong) LOTAnimatedSwitch *toggle1;
 @property (nonatomic, strong) LOTAnimatedSwitch *heartIcon;
@@ -24,6 +24,7 @@
   [super viewDidLoad];
   
   self.view.backgroundColor = [UIColor whiteColor];
+  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Custom Color" style:UIBarButtonItemStylePlain target:self action:@selector(setColorDelegate)];
   
   /// An animated toggle with different ON and OFF animations.
   
@@ -33,7 +34,6 @@
   [self.toggle1 setProgressRangeForOnState:0.5 toProgress:1];
   /// Off animation is 0 to 0.5 progress.
   [self.toggle1 setProgressRangeForOffState:0 toProgress:0.5];
-  
   [self.toggle1 addTarget:self action:@selector(switchToggled:) forControlEvents:UIControlEventValueChanged];
   [self.view addSubview:self.toggle1];
   
@@ -69,6 +69,11 @@
   [self.view addSubview:self.statefulSwitch];
 }
 
+- (void)setColorDelegate {
+  [self.toggle1.animationView logHierarchyKeypaths];
+  [self.toggle1.animationView setValueDelegate:self forKeypath:[LOTKeypath keypathWithString:@"Switch Outline Outlines.Fill 1.Color"]];
+}
+
 - (void)viewDidLayoutSubviews {
   [super viewDidLayoutSubviews];
   
@@ -80,6 +85,20 @@
 
 - (void)switchToggled:(LOTAnimatedSwitch *)animatedSwitch {
   NSLog(@"The switch is %@", (animatedSwitch.on ? @"ON" : @"OFF"));
+}
+
+- (CGColorRef)colorForFrame:(CGFloat)currentFrame
+              startKeyframe:(CGFloat)startKeyframe
+                endKeyframe:(CGFloat)endKeyframe
+       interpolatedProgress:(CGFloat)interpolatedProgress
+                 startColor:(CGColorRef)startColor
+                   endColor:(CGColorRef)endColor
+               currentColor:(CGColorRef)interpolatedColor {
+  
+  CGFloat red =  (CGFloat)arc4random()/(CGFloat)RAND_MAX;
+  CGFloat blue = (CGFloat)arc4random()/(CGFloat)RAND_MAX;
+  CGFloat green = (CGFloat)arc4random()/(CGFloat)RAND_MAX;
+  return [[UIColor colorWithRed:red green:green blue:blue alpha:1] CGColor];
 }
 
 @end

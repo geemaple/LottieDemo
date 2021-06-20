@@ -45,6 +45,7 @@
   _boatLoader.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
   _boatLoader.contentMode = UIViewContentModeScaleAspectFill;
   _boatLoader.frame = self.view.bounds;
+  [_boatLoader logHierarchyKeypaths];
   // Add the Animation
   [self.view addSubview:_boatLoader];
 

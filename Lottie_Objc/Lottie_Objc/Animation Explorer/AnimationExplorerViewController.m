@@ -90,7 +90,7 @@ typedef enum : NSUInteger {
   self.zSlider = [[UISlider alloc] initWithFrame:CGRectZero];
   [self.zSlider addTarget:self action:@selector(_zSliderChanged:) forControlEvents:UIControlEventValueChanged];
   self.zSlider.minimumValue = 0;
-  self.zSlider.maximumValue = 2;
+  self.zSlider.maximumValue = 4;
   self.zSlider.value = 0;
   [self.view addSubview:self.zSlider];
   
@@ -103,11 +103,8 @@ typedef enum : NSUInteger {
   self.zSlider.value = self.zSlider.minimumValue;
   
   CALayer *target = self.laAnimation.layer;
-  
-  CATransform3D perspective = CATransform3DIdentity;
-
-  target.sublayerTransform = perspective;
-  [self levelTravelLayer:target transform:perspective zIndexScale:self.zSlider.value];
+  target.sublayerTransform = CATransform3DIdentity;
+  [self levelTravelLayer:target transform:CATransform3DIdentity zIndexScale:self.zSlider.value];
 }
 
 - (void)debugPerspective {
@@ -115,14 +112,12 @@ typedef enum : NSUInteger {
   
   CATransform3D perspective = CATransform3DIdentity;
   perspective.m34 = -1.0 / 1000;
-  perspective = CATransform3DRotate(perspective, self.rotateSlider.value, 0, 1, 0);
-
-  target.sublayerTransform = perspective;
+  target.sublayerTransform = CATransform3DRotate(perspective, self.rotateSlider.value, 0, 1, 0);;
   [self levelTravelLayer:target transform:perspective zIndexScale:self.zSlider.value];
 }
 
 - (void)levelTravelLayer:(CALayer *)layer transform:(CATransform3D)perspective zIndexScale:(CGFloat)zIndexScale{
-  layer.masksToBounds = YES;
+  
   NSMutableArray *queue = [[NSMutableArray alloc] initWithArray:layer.sublayers];
   NSInteger level = 0;
   while (queue.count > 0) {
@@ -131,9 +126,9 @@ typedef enum : NSUInteger {
       CALayer *sub = [queue firstObject];
       [queue removeObjectAtIndex:0];
       sub.sublayerTransform = perspective;
-      sub.borderColor = [[self brightRandomColorWithAlpha:0.5] CGColor];
+      sub.borderColor = [[self randomColorWithAlpha:0.5] CGColor];
       sub.borderWidth = zIndexScale > 0 ? 1.f : 0.f;
-      sub.zPosition = (level + i) * zIndexScale;
+      sub.zPosition = (i) * zIndexScale;
       NSLog(@"zPosition = %@ bounds = %@", @(sub.zPosition), NSStringFromCGRect(sub.bounds));
       [queue addObjectsFromArray:sub.sublayers];
     }
@@ -141,17 +136,11 @@ typedef enum : NSUInteger {
   }
 }
 
-- (UIColor *)brightRandomColorWithAlpha:(CGFloat)alpha {
-  
-  while (YES) {
+- (UIColor *)randomColorWithAlpha:(CGFloat)alpha {
     CGFloat red =  (CGFloat)arc4random()/(CGFloat)RAND_MAX;
     CGFloat blue = (CGFloat)arc4random()/(CGFloat)RAND_MAX;
     CGFloat green = (CGFloat)arc4random()/(CGFloat)RAND_MAX;
-    CGFloat gray = 0.299 * red + 0.587 * green + 0.114 * blue;
-    if (gray < 0.6) {
-      return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
-    }
-  }
+    return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
 }
 
 - (UIBarButtonItem *)flexItem {
