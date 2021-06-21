@@ -51,7 +51,7 @@
 
 - (void)viewDidLayoutSubviews {
   [super viewDidLayoutSubviews];
-  CGRect lottieRect = CGRectMake(0, self.view.safeAreaInsets.top, self.view.bounds.size.width, self.view.bounds.size.height * 0.5);
+  CGRect lottieRect = CGRectMake(0, self.view.safeAreaInsets.top, self.view.bounds.size.width, self.view.bounds.size.height * 0.4);
   self.lottieLogo.frame = lottieRect;
   self.tableView.frame = CGRectMake(0, CGRectGetMaxY(lottieRect), CGRectGetWidth(lottieRect), self.view.bounds.size.height - CGRectGetMaxY(lottieRect));
 }
@@ -71,7 +71,9 @@
     @{@"name" : @"Download Progress",
       @"vc" : @"LADownloadTestViewController"},
     @{@"name" : @"Dynamic Image",
-      @"vc" : @"LADynamicImageViewController"},];
+      @"vc" : @"LADynamicImageViewController"},
+    @{@"name" : @"Intro Demo",
+      @"vc" : @"LAIntroViewController"},];
 }
 
 - (void)_playLottieAnimation {

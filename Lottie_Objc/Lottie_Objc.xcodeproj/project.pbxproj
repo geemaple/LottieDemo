@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0522EE09267F9EDA0046B1C4 /* CardAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 0522EE08267F9EDA0046B1C4 /* CardAnimation.json */; };
+		0522EE0B2680E3690046B1C4 /* tutorial.json in Resources */ = {isa = PBXBuildFile; fileRef = 0522EE0A2680E3690046B1C4 /* tutorial.json */; };
+		0522EE0E2680E3A60046B1C4 /* LAIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0522EE0D2680E3A60046B1C4 /* LAIntroViewController.m */; };
 		5ED7806B267B478400E721FC /* T.json in Resources */ = {isa = PBXBuildFile; fileRef = 5ED78038267B478400E721FC /* T.json */; };
 		5ED7806C267B478400E721FC /* A.json in Resources */ = {isa = PBXBuildFile; fileRef = 5ED78039267B478400E721FC /* A.json */; };
 		5ED7806D267B478400E721FC /* X.json in Resources */ = {isa = PBXBuildFile; fileRef = 5ED7803A267B478400E721FC /* X.json */; };
@@ -78,6 +80,9 @@
 
 /* Begin PBXFileReference section */
 		0522EE08267F9EDA0046B1C4 /* CardAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CardAnimation.json; sourceTree = "<group>"; };
+		0522EE0A2680E3690046B1C4 /* tutorial.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tutorial.json; sourceTree = "<group>"; };
+		0522EE0C2680E3A60046B1C4 /* LAIntroViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LAIntroViewController.h; path = Lottie_Objc/LAIntroViewController.h; sourceTree = SOURCE_ROOT; };
+		0522EE0D2680E3A60046B1C4 /* LAIntroViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LAIntroViewController.m; path = Lottie_Objc/LAIntroViewController.m; sourceTree = SOURCE_ROOT; };
 		4B0E252EECB8FF1D6E9178BF /* Pods-Lottie_objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lottie_objc.release.xcconfig"; path = "Target Support Files/Pods-Lottie_objc/Pods-Lottie_objc.release.xcconfig"; sourceTree = "<group>"; };
 		5ED78038267B478400E721FC /* T.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = T.json; sourceTree = "<group>"; };
 		5ED78039267B478400E721FC /* A.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = A.json; sourceTree = "<group>"; };
@@ -234,6 +239,7 @@
 		5ED78059267B478400E721FC /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				0522EE0A2680E3690046B1C4 /* tutorial.json */,
 				0522EE08267F9EDA0046B1C4 /* CardAnimation.json */,
 				5ED7805A267B478400E721FC /* Switch.json */,
 				5ED7805B267B478400E721FC /* TwitterHeart.json */,
@@ -318,6 +324,8 @@
 				5EF2E547267AFCAF003E8285 /* LaunchScreen.storyboard */,
 				5EF2E54A267AFCAF003E8285 /* Info.plist */,
 				5EF2E54B267AFCAF003E8285 /* main.m */,
+				0522EE0C2680E3A60046B1C4 /* LAIntroViewController.h */,
+				0522EE0D2680E3A60046B1C4 /* LAIntroViewController.m */,
 			);
 			path = Lottie_objc;
 			sourceTree = "<group>";
@@ -455,6 +463,7 @@
 				5ED78079267B478400E721FC /* I.json in Resources */,
 				5ED7807A267B478400E721FC /* E.json in Resources */,
 				5ED78073267B478400E721FC /* K.json in Resources */,
+				0522EE0B2680E3690046B1C4 /* tutorial.json in Resources */,
 				0522EE09267F9EDA0046B1C4 /* CardAnimation.json in Resources */,
 				5ED78075267B478400E721FC /* G.json in Resources */,
 				5ED78096267B478400E721FC /* Switch_States.json in Resources */,
@@ -515,6 +524,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0522EE0E2680E3A60046B1C4 /* LAIntroViewController.m in Sources */,
 				5EF2E682267B428C003E8285 /* AnimationExplorerViewController.m in Sources */,
 				5ED780AC267C4C6E00E721FC /* LAControlsViewController.m in Sources */,
 				5EF2E6F1267B448F003E8285 /* LottieRootViewController.m in Sources */,
