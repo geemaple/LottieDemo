@@ -75,6 +75,7 @@
 		5EF2E682267B428C003E8285 /* AnimationExplorerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2E67C267B428B003E8285 /* AnimationExplorerViewController.m */; };
 		5EF2E683267B428C003E8285 /* LAQRScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2E67E267B428B003E8285 /* LAQRScannerViewController.m */; };
 		5EF2E6F1267B448F003E8285 /* LottieRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2E6F0267B448F003E8285 /* LottieRootViewController.m */; };
+		5EF2E923268064F6003E8285 /* FallingStar.json in Resources */ = {isa = PBXBuildFile; fileRef = 5EF2E922268064F5003E8285 /* FallingStar.json */; };
 		97537DA557523A63D4E09E3B /* Pods_Lottie_objc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A975CC7A0A181F4FDB7FD57B /* Pods_Lottie_objc.framework */; };
 /* End PBXBuildFile section */
 
@@ -163,6 +164,7 @@
 		5EF2E680267B428C003E8285 /* JSONExplorerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONExplorerViewController.h; sourceTree = "<group>"; };
 		5EF2E6EF267B448F003E8285 /* LottieRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LottieRootViewController.h; sourceTree = "<group>"; };
 		5EF2E6F0267B448F003E8285 /* LottieRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LottieRootViewController.m; sourceTree = "<group>"; };
+		5EF2E922268064F5003E8285 /* FallingStar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FallingStar.json; sourceTree = "<group>"; };
 		A975CC7A0A181F4FDB7FD57B /* Pods_Lottie_objc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lottie_objc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB2CD3CCA596E8172B8AD7CC /* Pods-Lottie_objc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lottie_objc.debug.xcconfig"; path = "Target Support Files/Pods-Lottie_objc/Pods-Lottie_objc.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -240,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				0522EE0A2680E3690046B1C4 /* tutorial.json */,
+				5EF2E922268064F5003E8285 /* FallingStar.json */,
 				0522EE08267F9EDA0046B1C4 /* CardAnimation.json */,
 				5ED7805A267B478400E721FC /* Switch.json */,
 				5ED7805B267B478400E721FC /* TwitterHeart.json */,
@@ -447,6 +450,7 @@
 				5ED7809A267B478400E721FC /* LottieLogo1_masked.json in Resources */,
 				5ED7806F267B478400E721FC /* M.json in Resources */,
 				5ED78099267B478400E721FC /* PinJump.json in Resources */,
+				5EF2E923268064F6003E8285 /* FallingStar.json in Resources */,
 				5ED7808E267B478400E721FC /* MotionCorpse-Jrcanest.json in Resources */,
 				5ED78081267B478400E721FC /* C.json in Resources */,
 				5ED78092267B478400E721FC /* GeometryTransformTest.json in Resources */,
